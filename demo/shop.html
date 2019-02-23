@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<!-- 让IE采用最新的渲染模式 -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- 移动端的页面宽度等于设备宽度，缩放比为1 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap-theme.css">
+<link rel="stylesheet" href="css/sidebarDemo2.css">
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/shop.css">
+<!--动画CSS插件-->
+<link rel="stylesheet" type="text/css" href="css/animate.min.css">
+<!-- paste this code into your webpage -->
+<link href="tablecloth/tablecloth.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="tablecloth/tablecloth.js"></script>
+<!-- end -->
+<title>shop</title>
+<style>
+.black_overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.8;
+    opacity:.80;
+    filter: alpha(opacity=88);
+}
+.white_content {
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 55%;
+    height: 55%;
+    padding: 20px;
+    border: 10px solid orange;
+    background-color: white;
+    z-index:1002;
+    overflow: auto;
+}
+</style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <!-- 当浏览器大小下于一定程度后的响应式图标-->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+         <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+      <!--设置商标-->
+      <a class="navbar-brand" href="#">system name</a> </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">log in</a></li>
+        <li><a href="#">sign up</a></li>
+        <li><a href="#" data-toggle="modal" data-target="#about">contect us</a></li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>
+<div id="sidebar">
+  <ul>
+    <li id="prof" class="item"> <span class="glyphicon glyphicon-user"> </span>
+      <div><a href="#">my account</a> </div>
+    </li>
+    <li id="broadcast" class="item"> <span class="glyphicon glyphicon-bell"></span>
+      <div> alert </div>
+    </li>
+    <li id="foot" class="item"> <span class="glyphicon glyphicon-eye-open"> </span>
+      <div> history </div>
+    </li>
+    <li id="calendar" class="item"> <span class="glyphicon glyphicon-time"></span>
+      <div> calendar </div>
+    </li>
+  </ul>
+  <div id="closeBar">
+    <span class="glyphicon glyphicon-remove"></span>
+  </div>
+</div>
+
+<div class="jumbotron wow slideInDown ">
+  <h1>title 1</h1>
+  <p >detail 1</p>
+  <p><a class="btn btn-primary btn-lg" href="publish.html" role="button">release event</a></p>
+  <!-- <div class="input-group col-sm-3"> <span class="input-group-btn ">
+    <button class="btn btn-info" type="button"> 搜 索 </button>
+    </span>
+    <input type="text" class="form-control" placeholder="Search for...">
+  </div>-->
+  <!-- /input-group -->
+
+</div>
+
+<!--板块-->
+<div class="container wow slideInDown">
+  <div class="row">
+    <ul class="nav nav-tabs ">
+      <li role="presentation" ><a href="#">class 1</a></li>
+      <li role="presentation" class="active"><a href="#" >class 2</a></li>
+      <li role="presentation"><a href="#">class 3</a></li>
+      <li role="presentation"><a href="#">class 4</a></li>
+      <li role="presentation"><a href="#">class 5</a></li>
+      <li role="presentation"><a href="#">class 6</a></li>
+      <li role="presentation"><a href="#">class 7</a></li>
+    </ul>
+    </br>
+    <h1 class="wow slideInDown">ongoing events：</h1>
+    </br>
+    <div class="img col-md-4 wow flash " data-wow-duration="1s" data-wow-delay="2s"> <a href="#"> <img src="./images/day1.png"></a></br>
+      <div class="foot_money "> <span>￥9.99</span> <a href="#" class="foot_a"> </a> </div>
+      <div class="foot_title ">
+        <p>some detail</p>
+      </div>
+      <div class="time text-danger"> <span class="glyphicon glyphicon-time"></span> <span id="t_d">00day</span>
+      <span id="t_h">03h</span> <span id="t_m">11m</span> <span id="t_s">00s </div>
+      <!--time 结束-->
+      <button type="button" class="btn btn-danger col-md-4 col-sm-offset-2  wow flash"  data-wow-duration="1s" data-wow-delay="2s" id="daoqi">join</button>
+    </div>
+    <!-- img 结束-->
+    <div class="img col-md-4 wow flash " data-wow-duration="1s" data-wow-delay="2s"> <a href="#"> <img src="./images/day1.png"></a></br>
+      <div class="foot_money "> <span>￥9.99</span> <a href="#" class="foot_a"> </a> </div>
+      <div class="foot_title ">
+        <p>some detail</p>
+      </div>
+      <button type="button" class="btn btn-danger col-md-4 col-sm-offset-2  wow flash"  data-wow-duration="1s" data-wow-delay="2s" id="daoqi">join</button>
+    </div>
+    <!-- img 结束-->
+    <div class="img col-md-4 wow flash " data-wow-duration="1s" data-wow-delay="2s"> <a href="#"> <img src="./images/day1.png"></a></br>
+      <div class="foot_money "> <span>￥9.99</span> <a href="#" class="foot_a"> </a> </div>
+      <div class="foot_title ">
+        <p>some detail</p>
+      </div>
+      <button type="button" class="btn btn-danger col-md-4 col-sm-offset-2  wow flash"  data-wow-duration="1s" data-wow-delay="2s" id="daoqi">join</button>
+    </div>
+    <!-- img 结束-->
+  </div>
+  </br>
+  <h1 class="wow slideInDown" data-wow-duration="1.5s">Event historys<i></h1>
+  </br>
+  <div id="light" class="white_content">WaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagh
+    WaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagh
+    WaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaghWaaaaaaaaaaaaaaaaaaaaaaaaaaaaaagh
+    Waaaaaaaaaaaaaaaaaaaaaaaaaaaaaagh.
+  <a href = "javascript:void(0)" onclick = "document.getElementById('light').style.display='none';document.getElementById('fade').style.display='none'">
+    Close</a></div>
+  <div class="img col-md-12 wow flash ">
+  <table cellspacing="0" cellpadding="0" style="word-wrap:break-word; word-break:break-all;">
+    <tr>
+      <td>&nbsp;</td>
+      <th>Title</th>
+      <th>Time</th>
+      <th>Coche</th>
+      <th>Details</th>
+      <th>Join</th>
+    </tr>
+    <tr>
+      <th>Title</th>
+      <td>Event 1</td>
+      <td>2019/6/4</td>
+      <td>Someone</td>
+      <td>Waaaaaaaaaaaaaaaaaaaaaaaaaaaaaagh
+        <p><a href = "javascript:void(0)"
+          onclick = "document.getElementById('light').style.display='block';document.getElementById('fade').style.display='block'">SHow more</a></p>
+        <div id="fade" class="black_overlay"></div>
+      </td>
+      <td><a href="#">Join it</td>
+    </tr>
+  </table>
+  </div>
+</div>
+</br>
+
+<!--板块 结束-->
+<!--瀑布流布局开始-->
+<!--
+<div id="main">
+  <div class="box">
+    <div class="pic"> <img src="./images/b5.jpg"/> </div>
+    <div class="foot_money "> <span>￥19.90</span> <a href="#" class="foot_a"> <span class="glyphicon lyphicon glyphicon-heart-empty">32</span></a> </div>
+    <div class="foot_title ">
+      <p>。。。。。。。</p>
+    </div>
+  </div>
+</div>
+-->
+<!--右侧边栏-->
+<div class="right_go">
+  <p class="pull-right"><a href="#top">back to top</a></p>
+</div>
+<!--时间js-->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/waterfall.js"/></script>
+<script src="js/wow.min.js"></script>
+<script src="js/modernizr.js"></script>
+<script src="js/sidebarDemo2.js"></script>
+<script>
+  function GetRTime(){
+       var EndTime= new Date('2019/06/28 00:00:00');//这里设置你预定的时间
+       var NowTime = new Date();
+       var t =EndTime.getTime() - NowTime.getTime();
+       var d=Math.floor(t/1000/60/60/24);
+       var h=Math.floor(t/1000/60/60%24);
+       var m=Math.floor(t/1000/60%60);
+       var s=Math.floor(t/1000%60);
+
+       document.getElementById("t_d").innerHTML = d + "day";
+       document.getElementById("t_h").innerHTML = h + "h";
+       document.getElementById("t_m").innerHTML = m + "m";
+       document.getElementById("t_s").innerHTML = s + "s";
+
+}
+   setInterval(GetRTime,0);
+
+
+
+</script>
+
+
+
+ <script>
+    /*jshint expr: true */
+    /*jslint evil: true */
+    window.jQuery || document.write('<script src="components/jquery/dist/jquery.min.js"><\/script>');
+    </script>
+<script>
+$(function(){
+
+new WOW().init();
+})
+</script>
+</body>
+</html>
